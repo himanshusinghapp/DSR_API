@@ -10,10 +10,6 @@ const app = express();
 app.use(express.json());
 connectDB();
 setupSwagger(app);
-app.get('/', (req, res) => {
-  res.send('🚀 Server is up and running!');
-});
-
 app.use(v1Routes);
 
 export default app;
